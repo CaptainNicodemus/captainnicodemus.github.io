@@ -19,12 +19,38 @@
         <h1>
             Base Converter
         </h1>
-        <h5>
-            Not yet implemented
-        </h5>
-        <p>
-            Convert number from any base to any base:
-        </p>
+          
+      <fieldset>
+         <form action = "#" method = "post" name = "myform">
+            <h4> Number </h4>
+            <input type = "text" name = "Number" id = "n" onkeyup="calculate()"> <br/>  
+            <h4> Base </h4>
+            <input type = "text" name = "Base" id = "b" onkeyup="calculate()"> <br/>  
+            <h4> Base 2 (binary) = <b id="p2">###</b></h4>
+            <h4> Base 8 (octal) = <b id="p8">###</b></h4>
+            <h4> Base 10 (decimal) = <b id="p10">###</b></h4>
+            <h4> Base 16 (hex) = <b id="p16">###</b></h4>
+      </fieldset>
+      </form>  
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>  
+      <script type = "text/javascript">  
+         function calculate() {   
+         
+           var base = document.getElementById('b').value;
+           var numb = document.getElementById('n').value;
+         
+           var b10 = parseInt(numb, base);
+         
+           var b2 = b10.toString(2);
+           var b8 = b10.toString(8);
+           var b16 = b10.toString(16);
+           document.getElementById("p2").innerHTML = b2;
+           document.getElementById("p8").innerHTML = b8;
+           document.getElementById("p10").innerHTML = b10;
+           document.getElementById("p16").innerHTML = b16;
+           
+         }
+      </script>  
        
 
 
