@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: nicodemusrobles.com
+Token: b54834183cfddabd258203b2d19de72051e1af1fd7535eab985c4d545443bc11
